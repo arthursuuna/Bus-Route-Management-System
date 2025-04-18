@@ -5,12 +5,12 @@
 <!-- Hero Section -->
 <section class="hero d-flex align-items-center text-white" style="min-height: 90vh;">
     <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-3">Bus Pass and Route Management System</h1>
+        <h1 class="display-4 fw-bold mb-3">Bus Ticket Booking System</h1>
         <p class="lead mb-4">
-            Now finding bus tickets is easier. You can order online at BPRMS — no need to go to a terminal or agent. Fast, simple, and secure.
-            <br>Choose Seats. Cheapest Every Day. 24/7 Support. All  Routes.
+            Now finding bus tickets is easier. You can order online at BTBS — no need to go to a terminal or agent.
+            <br>Choose Seats. Cheapest Every Day. 24/7 Customer Service. All Classes and Routes.
         </p>
-        {{-- <a href="{{ route('bookings') }}" class="btn btn-danger btn-lg px-4">Search Tickets</a> --}}
+        <a href="{{ route('bookings') }}" class="btn btn-danger btn-lg px-4">Search Tickets</a>
     </div>
 </section>
 
@@ -32,10 +32,32 @@
             <div class="col-md-4">
                 <img src="/images/icon-payment.png" class="img-fluid mb-3" style="height: 80px;" alt="Payment method">
                 <h5 class="fw-bold">Easy Payment Method</h5>
-                <p class="text-muted">Pay via ATM transfer, mobile money, or internet banking.</p>
+                <p class="text-muted">Pay via ATM transfer, mobile money, or internet banking securely.</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Toast Notification -->
+@if(session('registered'))
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="registerToast" class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                {{ session('registered') }}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toastEl = document.getElementById('registerToast');
+    if (toastEl) {
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+    }
+</script>
+@endif
 
 @endsection

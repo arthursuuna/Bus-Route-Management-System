@@ -8,10 +8,14 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name'); // Full Name
+            $table->string('username')->unique(); // Username
             $table->string('email')->unique();
+            $table->string('contact_number')->nullable();
+            $table->text('address')->nullable();
             $table->string('password');
-            $table->enum('role', ['admin', 'passenger', 'conductor']);
+            $table->enum('role', ['admin', 'passenger'])->default('passenger'); // Removed 'conductor'
+            $table->rememberToken();
             $table->timestamps();
         });
     }

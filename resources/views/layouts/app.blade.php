@@ -46,27 +46,28 @@
 <body>
 
     {{-- Navigation --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-                <img src="/logo.png" alt="BTBS Logo">
-                <strong>BTBS</strong>
+                <img src="/logo.png" alt="BPRMS Logo" height="30" class="me-2">
+                <strong>BPRMS</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                    {{-- <li class="nav-item"><a class="nav-link" href="{{ route('bookings') }}">Make Bookings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('bookings') }}">Make Bookings</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('tickets') }}">Check Tickets</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li> --}}
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    
     {{-- Page Content --}}
     <main>
         @yield('content')
