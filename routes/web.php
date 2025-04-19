@@ -34,7 +34,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/reports', [AdminController::class, 'reports'])->name('admin.reports');
     Route::get('/tickets', [AdminController::class, 'tickets'])->name('admin.tickets');
-    Route::get('/passes', [AdminController::class, 'passes'])->name('admin.passes');
+    Route::get('/buses', [AdminController::class, 'buses'])->name('admin.buses');
 });
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');

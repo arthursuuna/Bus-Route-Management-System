@@ -30,8 +30,13 @@ class AdminController extends Controller
         return view('admin.tickets');
     }
 
-    public function passes()
+    public function buses()
     {
-        return view('admin.passes');
+        return view('admin.buses');
     }
+//     public function buses()
+// {
+//     return view('admin.buses');
+// }
+
 }
