@@ -7,7 +7,18 @@
 
     {{-- Bootstrap 5 CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384‑ENjdO4Dr2bkBIFxQpeoYz1KfQ775nqEpHbU6fI1GOLcb7x3q4uO33B+18ifwk5y"
+    crossorigin="anonymous"
+  >
 
+  <!-- DataTables CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+  >
     {{-- Custom Styles --}}
     <style>
         body {
@@ -82,6 +93,29 @@
 
     {{-- Bootstrap 5 JS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery (required by DataTables) -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256‑Q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4="
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Bootstrap Bundle (includes Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384‑QFjHSCiCtzBPY/zUEYbJeYt4AhJJrdX2OBOY4Jv36GTU4VBrfQ5p6WVk/GeV4Hr9"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- DataTables JS -->
+  <script
+    src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js">
+  </script>
+
+  <!-- Page‑specific scripts -->
+  @stack('scripts')
+</body>
+</html>
 
 </body>
 </html>

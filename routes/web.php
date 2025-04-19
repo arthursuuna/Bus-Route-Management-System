@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminLoginController;
+use App\Http\Controllers\Admin\BusController;
 
 
 
@@ -34,7 +35,19 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/reports', [AdminController::class, 'reports'])->name('admin.reports');
     Route::get('/tickets', [AdminController::class, 'tickets'])->name('admin.tickets');
-    Route::get('/buses', [AdminController::class, 'buses'])->name('admin.buses');
+    Route::get('/bus', [AdminController::class, 'buses'])->name('admin.buses');
 });
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
+
+
+// Bus management (all in one blade)
+Route::middleware('auth')->prefix('admin')->name('admin.')->group(function(){
+    Route::get('/buses',       [BusController::class,'index']) ->name('buses.index');
+    Route::post('/buses',      [BusController::class,'store']) ->name('buses.store');
+    Route::get('/buses/{bus}', [BusController::class,'show'])  ->name('buses.show');
+});
+Route::put('/admin/buses/{bus}', [BusController::class,'update'])
+     ->name('admin.buses.update')
+     ->middleware('auth');
+

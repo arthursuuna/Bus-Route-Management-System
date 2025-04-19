@@ -14,7 +14,7 @@
 
       <ul class="nav flex-column px-3">
         <li class="nav-item mb-2">
-          <a class="nav-link text-white fw-bold" href="{{ route('admin.dashboard') }}">
+          <a class="nav-link text-white " href="{{ route('admin.dashboard') }}">
             <i class="bi bi-speedometer2 me-2"></i> Dashboard
           </a>
         </li>
@@ -29,7 +29,7 @@
           </a>
         </li>
         <li class="nav-item mb-2">
-          <a class="nav-link text-white" href="{{ route('admin.reports') }}">
+          <a class="nav-link text-white fw-bold" href="{{ route('admin.reports') }}">
             <i class="bi bi-bar-chart-line-fill me-2"></i> Reports View
           </a>
         </li>
