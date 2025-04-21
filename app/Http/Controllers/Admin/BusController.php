@@ -48,4 +48,9 @@ class BusController extends Controller
     return redirect()->route('admin.buses.index')
                      ->with('success','Bus updated.');
 }
+/**
+ * Return a single schedule + its bus for AJAX.
+ */
+
+
 }

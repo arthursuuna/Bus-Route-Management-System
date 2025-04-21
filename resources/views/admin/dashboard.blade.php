@@ -1,3 +1,4 @@
+{{-- resources/views/admin/dashboard.blade.php --}}
 @extends('layouts.app')
 
 @section('content')
@@ -24,23 +25,19 @@
           </a>
         </li>
         <li class="nav-item mb-2">
-          <a class="nav-link text-white" href="{{ route('admin.users') }}">
-            <i class="bi bi-people-fill me-2"></i> Users View
+          <a class="nav-link text-white" href="{{ route('admin.schedules') }}">
+            <i class="bi bi-calendar-event me-2"></i> Manage Schedules
           </a>
         </li>
-        <li class="nav-item mb-2">
-          <a class="nav-link text-white" href="{{ route('admin.reports') }}">
-            <i class="bi bi-bar-chart-line-fill me-2"></i> Reports View
-          </a>
-        </li>
+        {{-- Reports removed --}}
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.tickets') }}">
-            <i class="bi bi-ticket-detailed-fill me-2"></i>Tickets Passes
+            <i class="bi bi-ticket-detailed-fill me-2"></i> Users' Passes
           </a>
         </li>
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.buses') }}">
-            <i class="bi bi-card-checklist me-2"></i>  Buses
+            <i class="bi bi-bus-front-fill me-2"></i> Buses
           </a>
         </li>
         <li class="nav-item mt-4">
@@ -57,16 +54,18 @@
       <h4 class="fw-bold text-primary mb-4">Admin Dashboard</h4>
 
       <div class="row g-4">
+        {{-- Total Terminals --}}
         <div class="col-md-4">
           <div class="bg-white shadow-sm rounded p-4 d-flex justify-content-between align-items-center border-start border-info border-4">
             <div>
               <h6 class="text-secondary text-uppercase mb-1">Total Terminals</h6>
-              <h3 class="fw-bold text-dark">5</h3>
+              <h3 class="fw-bold text-dark">{{ $terminalsCount }}</h3>
             </div>
             <i class="bi bi-signpost-split-fill fs-1 text-info"></i>
           </div>
         </div>
 
+        {{-- Total Tickets Sold (static or dynamic if you prefer)
         <div class="col-md-4">
           <div class="bg-white shadow-sm rounded p-4 d-flex justify-content-between align-items-center border-start border-success border-4">
             <div>
@@ -75,49 +74,44 @@
             </div>
             <i class="bi bi-ticket-perforated-fill fs-1 text-success"></i>
           </div>
-        </div>
+        </div> --}}
 
+        {{-- Available Schedules --}}
         <div class="col-md-4">
           <div class="bg-white shadow-sm rounded p-4 d-flex justify-content-between align-items-center border-start border-primary border-4">
             <div>
               <h6 class="text-secondary text-uppercase mb-1">Available Schedules</h6>
-              <h3 class="fw-bold text-dark">3</h3>
+              <h3 class="fw-bold text-dark">{{ $schedulesCount }}</h3>
             </div>
             <i class="bi bi-calendar-check-fill fs-1 text-primary"></i>
           </div>
         </div>
 
+        {{-- Available Buses --}}
         <div class="col-md-4">
           <div class="bg-white shadow-sm rounded p-4 d-flex justify-content-between align-items-center border-start border-warning border-4">
             <div>
               <h6 class="text-secondary text-uppercase mb-1">Available Buses</h6>
-              <h3 class="fw-bold text-dark">6</h3>
+              <h3 class="fw-bold text-dark">{{ $busesCount }}</h3>
             </div>
             <i class="bi bi-bus-front-fill fs-1 text-warning"></i>
           </div>
         </div>
 
+        {{-- Active Passes --}}
         <div class="col-md-4">
           <div class="bg-white shadow-sm rounded p-4 d-flex justify-content-between align-items-center border-start border-success border-4">
             <div>
-              <h6 class="text-secondary text-uppercase mb-1">Passes Approved</h6>
-              <h3 class="fw-bold text-dark">10</h3>
+              <h6 class="text-secondary text-uppercase mb-1">Total Passes</h6>
+<h3 class="fw-bold text-dark">{{ $passesCount }}</h3>
+
             </div>
             <i class="bi bi-check-circle-fill fs-1 text-success"></i>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="bg-white shadow-sm rounded p-4 d-flex justify-content-between align-items-center border-start border-danger border-4">
-            <div>
-              <h6 class="text-secondary text-uppercase mb-1">New Enquiries</h6>
-              <h3 class="fw-bold text-dark">2</h3>
-            </div>
-            <i class="bi bi-question-circle-fill fs-1 text-danger"></i>
-          </div>
-        </div>
+        {{-- “New Enquiries” removed --}}
       </div>
-
     </div>
   </div>
 </div>

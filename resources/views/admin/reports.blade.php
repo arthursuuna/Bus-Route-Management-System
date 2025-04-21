@@ -24,18 +24,18 @@
           </a>
         </li>
         <li class="nav-item mb-2">
-          <a class="nav-link text-white" href="{{ route('admin.users') }}">
-            <i class="bi bi-people-fill me-2"></i> Users View
+          <a class="nav-link text-white" href="{{ route('admin.schedules') }}">
+            <i class="bi bi-people-fill me-2"></i> Manage Schedules
           </a>
         </li>
-        <li class="nav-item mb-2">
+        {{-- <li class="nav-item mb-2">
           <a class="nav-link text-white fw-bold" href="{{ route('admin.reports') }}">
             <i class="bi bi-bar-chart-line-fill me-2"></i> Reports View
           </a>
-        </li>
+        </li> --}}
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.tickets') }}">
-            <i class="bi bi-ticket-detailed-fill me-2"></i>Tickets Passes
+            <i class="bi bi-ticket-detailed-fill me-2"></i>Users' Passes
           </a>
         </li>
         <li class="nav-item mb-2">
