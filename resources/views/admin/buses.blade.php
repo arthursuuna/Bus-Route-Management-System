@@ -20,12 +20,12 @@
         </li>
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.terminals') }}">
-            <i class="bi bi-building me-2"></i> Terminal View
+            <i class="bi bi-building me-2"></i> Terminals
           </a>
         </li>
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.schedules') }}">
-            <i class="bi bi-people-fill me-2"></i> Manage Schedules
+            <i class="bi bi-people-fill me-2"></i> Schedules
           </a>
         </li>
         {{-- <li class="nav-item mb-2">

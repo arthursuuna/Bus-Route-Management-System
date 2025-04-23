@@ -21,12 +21,12 @@
         </li>
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.terminals') }}">
-            <i class="bi bi-building me-2"></i> Terminal View
+            <i class="bi bi-building me-2"></i> Terminals
           </a>
         </li>
         <li class="nav-item mb-2">
           <a class="nav-link text-white" href="{{ route('admin.schedules') }}">
-            <i class="bi bi-calendar-event me-2"></i> Manage Schedules
+            <i class="bi bi-calendar-event me-2"></i>  Schedules
           </a>
         </li>
         {{-- <li class="nav-item mb-2">
@@ -55,7 +55,7 @@
 
     {{-- Main Content --}}
     <div class="col-md-10 py-4 px-5 bg-light">
-      <h4 class="fw-bold text-primary mb-4">Users’ Passes & Tickets</h4>
+      <h4 class="fw-bold text-primary mb-4">Users’ Passes </h4>
 
       <div class="card">
         <div class="card-body p-0">
