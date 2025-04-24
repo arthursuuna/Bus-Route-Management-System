@@ -28,7 +28,7 @@
         <li class="nav-item mb-2">
           <a class="nav-link text-white {{ request()->is('tickets')?'fw-bold':'' }}"
              href="{{ route('tickets') }}">
-            <i class="bi bi-ticket-detailed-fill me-2"></i> Tickets
+            <i class="bi bi-ticket-detailed-fill me-2"></i> Terminals
           </a>
         </li>
         <li class="nav-item mb-2">
